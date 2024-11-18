@@ -1,0 +1,450 @@
+/* Root variables */
+:root {
+    --main-color: #f73471;
+    --black: #000;
+    --light-color: #868e96;
+  }
+  
+  /* Reset default margin and padding */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Global styling for the body */
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff; /* White background */
+  }
+  
+  /* Main content wrapper */
+  .main-content {
+    flex: 1;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Logo styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+  
+  .logo span.fit {
+    color: #fff;
+  }
+  
+  .logo span.nezz {
+    color: var(--main-color);
+    margin-left: 0.2rem;
+  }
+  
+  /* Navigation styling */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--main-color);
+    transform: scale(0.9) rotate(3deg);
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgb(255, 222, 219) 17.8%, rgb(255, 210, 202) 100.2% );
+  transition: 0.5s;
+  border-radius: 10px;
+  }
+  
+  /* Dropdown menu styling */
+/* Dropdown starts */
+.dropdown-content {
+  margin-top: 5px;
+   border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Dropdown ends */
+  
+  /* Become a Member button styling */
+  /* Button starts */
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif; /* Use Playfair Display font family */
+    text-decoration: none; /* Remove underline */
+    margin-right: 2rem; /* Add margin to the right */
+  }
+  
+  .btn:hover {
+    background-color: #fff;
+    color: var(--main-color);
+  }
+  /* Button ends */
+
+  /* Hero section styling */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 80vh; /* Reduced height */
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(20%) brightness(90%); /* Adjust grayscale and brightness */
+    border-radius: 10px; /* Add border radius for a softer look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.hero-image:hover {
+    filter: grayscale(0%) brightness(100%); /* Revert grayscale and brightness on hover */
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+/*Main content*/
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.content h1 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    color: var(--main-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    color: var(--black);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.content th, .content td {
+    border: 1px solid var(--light-color);
+    padding: 12px;
+    text-align: left;
+}
+
+.content th {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.content td {
+    background-color: #f9f9f9;
+}
+
+/* img before after*/
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.section-container h2 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+
+}
+
+.section-container p {
+    color: var(--black);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.example {
+    flex-basis: calc(33.33% - 20px); /* Adjust width for each example */
+    position: relative;
+}
+
+.before-image,
+.after-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.before-image:hover,
+.after-image:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition for smooth fade effect */
+}
+
+.example:hover .after-image {
+    opacity: 1; /* Show after image on hover */
+}
+
+/* Form section styling */
+.form-section {
+    margin-top: 50px;
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: var(--main-color);
+}
+
+.phone-input {
+    display: flex;
+}
+
+.phone-input select {
+    flex: 1;
+    margin-right: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.phone-input input[type="tel"] {
+    flex: 4;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffdcf7;
+}
+/* Footer section */
+footer {
+  background-color: #222;
+    color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f73471;
+}
+
+.footer-section p, .footer-section a {
+  color: #ccc;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #f73471;
+}
+
+.quick-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin: 5px 0;
+}
+
+.quick-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+  color: #f73471;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+}
+
