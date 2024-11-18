@@ -1,0 +1,417 @@
+/* Root variables */
+:root {
+    --main-color: #f73471;
+    --black: #000;
+    --light-color: #868e96;
+  }
+  
+  /* Reset default margin and padding */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Global styling for the body */
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff; /* White background */
+  }
+  
+  /* Main content wrapper */
+  .main-content {
+    flex: 1;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Logo styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+  
+  .logo span.fit {
+    color: #fff;
+  }
+  
+  .logo span.nezz {
+    color: var(--main-color);
+    margin-left: 0.2rem;
+  }
+  
+  /* Navigation styling */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--main-color);
+    transform: scale(0.9) rotate(3deg);
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgb(255, 222, 219) 17.8%, rgb(255, 210, 202) 100.2% );
+  transition: 0.5s;
+  border-radius: 10px;
+  }
+  
+  /* Dropdown menu styling */
+/* Dropdown starts */
+.dropdown-content {
+  margin-top: 5px;
+   border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Dropdown ends */
+  
+  /* Become a Member button styling */
+  /* Button starts */
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif; /* Use Playfair Display font family */
+    text-decoration: none; /* Remove underline */
+    margin-right: 2rem; /* Add margin to the right */
+  }
+  
+  .btn:hover {
+    background-color: #fff;
+    color: var(--main-color);
+  }
+  /* Button ends */
+  /* Hero section styling */
+/* Hero starts */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Adjusted object-position to center bottom */
+    filter: brightness(50%);
+}
+
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    animation: fadeInUp 1s ease; /* Animation for fade in effect */
+    animation-delay: 0.5s; /* Delay for staggered animation */
+  }
+  
+  .hero-content p {
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    animation: fadeInUp 1s ease;
+    animation-delay: 1s;
+  }
+  
+  .hero-content strong {
+    font-weight: 500;
+    animation: fadeInUp 1s ease;
+    animation-delay: 1.5s;
+  }
+  
+  .hero-button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    cursor: pointer;
+    outline: none;
+    animation: fadeInUp 1s ease;
+    animation-delay: 2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+  }
+  
+  .hero-button:hover {
+    background-color: #fff;
+    color: var(--main-color);
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Move 20px down */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Move back to original position */
+    }
+  }
+  /* Hero ends */
+
+ /* Main content styling */
+.main-content {
+  padding: 80px 20px; /* Add padding for spacing */
+}
+
+.section-title {
+  text-align: center; /* Center-align section title */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  margin-top: -30px;
+  margin-bottom: 40px; /* Add spacing below the section title */
+  color: rgb(153, 0, 148); /* Use main color for section title */
+}
+
+.facial-description {
+  margin-bottom: 40px; /* Add spacing between different facial descriptions */
+}
+
+.sub-title {
+  color: var(--main-color); /* Use main color for sub-titles */
+  margin-bottom: 20px; /* Add spacing below sub-titles */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+
+.description {
+  margin-bottom: 20px; /* Add spacing below descriptions */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+  text-align: center; /* Center-align section title */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  margin-top: -30px;
+  margin-bottom: 40px; /* Add spacing below the section title */
+  color: rgb(153, 0, 148); /* Use main color for section title */
+}
+.facial-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items in one row */
+  grid-gap: 20px; /* Add gap between facial items */
+  text-align: center; /* Center-align content */
+}
+
+.facial {
+  border-radius: 10px; /* Add border radius for a rounded look */
+  overflow: hidden; /* Ensure images don't overflow */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add box shadow */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.facial:hover {
+  transform: translateY(-5px); /* Move box up slightly on hover */
+}
+
+.facial-image {
+  width: 100%;
+  height: 200px; /* Fixed height for each image */
+  object-fit: cover; /* Cover image within container */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.facial:hover .facial-image {
+  transform: scale(1.1); /* Scale image up slightly on hover */
+}
+
+.facial-info {
+  padding: 20px; /* Add padding inside facial item */
+  }
+
+.facial-title {
+  color: var(--main-color); /* Use main color for facial titles */
+  margin-bottom: 10px; /* Add spacing below facial titles */
+}
+
+/* Button at the Bottom Center */
+.btn-bottom {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 5px; /* Adjust margin-bottom as needed */
+}
+
+/* Adjust Button Style */
+.btn-bottom {
+  padding: 30px 30px; /* Adjust padding as needed */
+  font-size: 28px; /* Adjust font size as needed */
+  font-weight: bolder;
+  background-color: rgb(80, 51, 109);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-bottom:hover {
+  background-color: #ffc2ed;
+  color: black;
+}
+
+/* Footer section */
+footer {
+  background-color: #222;
+    color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f73471;
+}
+
+.footer-section p, .footer-section a {
+  color: #ccc;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #f73471;
+}
+
+.quick-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin: 5px 0;
+}
+
+.quick-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+  color: #f73471;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+}
+
